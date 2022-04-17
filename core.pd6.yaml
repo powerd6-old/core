@@ -1,0 +1,14 @@
+title: Core rulebook
+subtitle: |-
+  The core rules of the powerd6 role-playing system.
+authors:
+  - name: Hector Castelli Zacharias
+    email: hector.zacharias@gmail.com
+    twitter: zektorh
+chapters:
+  - title: Introduction
+    contents:
+      - type: markdown
+        filepath: introduction/welcome.md
+      - type: markdown
+        filepath: introduction/distribution.md
