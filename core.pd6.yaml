@@ -11,9 +11,9 @@ chapters:
   - title: Introduction
     contents:
       - type: markdown
-        filepath: introduction/welcome.md
+        filepath: ./introduction/welcome.md
       - type: markdown
-        filepath: introduction/distribution.md
+        filepath: ./introduction/distribution.md
 
 appendices:
   - title: Recommended expansions and supplements
@@ -21,4 +21,4 @@ appendices:
       - type: template
         template: recommended
         data:
-          - introduction/recommended.json
+          - ./introduction/recommended.json
