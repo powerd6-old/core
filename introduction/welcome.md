@@ -1,6 +1,8 @@
+# Welcome
+
 Welcome to the powerd6 role-playing system.
 
-This book contains the core rules of the game and provide a framework for players to use in order to run their fantastical narratives.
+This book contains the core rules of the system and provide a framework for players to use in order to run their fantastical narratives.
 
 The rules of powerd6 are designed for everyone and are guided by these principles:
 

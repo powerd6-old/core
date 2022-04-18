@@ -1,5 +1,9 @@
 ## A note on distribution
 
-The powerd6 system is capable of running a wide variety of games, as such the books are separated between the core rules, rules expansions and world-building supplements.
+The powerd6 system is capable of running a wide variety of games, as such the books are separated between the core rules, expansions and supplements.
 
-Strictly speaking, only the first one (the core rules) are required to play the game, but the other two provide a multitude of pre-created and balanced content for running a game quickly.
+In general, expansions add or modify the rules to encompass new situations that were not accounted for at the initial design, while supplements add world-building flavour and details, helping to get over the hurdle of creating content for your adventures.
+
+Strictly speaking, only the core rules are required to play the game, but the extra books provide a multitude of new rules, pre-created content, and balanced experiences for running a game quickly.
+
+See the [appendix: Recommended expansions and supplements](#appendix-recommended-expansions-and-supplements) for a list of some recommended books.

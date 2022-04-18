@@ -1,0 +1,38 @@
+-
+  function sortByName(a,b) {
+    const nameA = a.name.toUpperCase();
+    const nameB = b.name.toUpperCase();
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    return 0;
+  }
+  const expansions = data
+    .filter(d=>d.type==="expansion")
+    .sort(sortByName);
+  const supplements = data
+    .filter(d=>d.type==="supplement")
+    .sort(sortByName);
+
+mixin recommended-table(title, rows)
+  h2=title
+  table
+    thead
+      tr
+        th Name
+        th Description
+    tbody
+      each r in rows
+        tr
+          td
+            a(href=r.link)=r.name
+          td=r.description
+
+
+if expansions
+  +recommended-table("Expansions", expansions)
+if supplements
+  +recommended-table("Supplements", supplements)
