@@ -8,7 +8,7 @@ environment:
   sdk: '>=2.16.1 <3.0.0'
 
 dependencies: 
-  powerbook: ^0.1.1
+  powerbook: ^0.1.2
 
 dev_dependencies:
   lints: ^1.0.0

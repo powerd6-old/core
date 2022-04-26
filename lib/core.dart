@@ -1,3 +1,4 @@
+import 'package:core/src/introduction/book_structure.dart';
 import 'package:core/src/introduction/materials.dart';
 import 'package:core/src/introduction/distribution.dart';
 import 'package:core/src/introduction/recommended_distribution.dart';
@@ -16,7 +17,12 @@ Chapter introductionChapter =
   Welcome(),
   Distribution(recommendedAppendix: recommendedAppendix),
   // TODO: Write a "how to read"
-  // TODO: Introduce the book structure
+  BookStructure(
+      basicRules: basicsChapter,
+      characters: charactersChapter,
+      combat: combatChapter,
+      exploration: explorationChapter,
+      appendices: appendix),
   Materials()
 ]);
 
@@ -60,6 +66,10 @@ Chapter explorationChapter =
   // TODO: Explain how to use combat spells outside of combat
 ]);
 
+ChapterList appendix = ChapterList(
+    heading: Heading(title: "Appendices"),
+    chapters: [recommendedAppendix, chancesOfSuccess]);
+
 class CoreRuleBook extends Book {
   CoreRuleBook()
       : super(
@@ -75,7 +85,5 @@ class CoreRuleBook extends Book {
                   charactersChapter,
                   combatChapter
                 ]),
-            appendices: ChapterList(
-                heading: Heading(title: "Appendices"),
-                chapters: [recommendedAppendix, chancesOfSuccess]));
+            appendices: appendix);
 }
