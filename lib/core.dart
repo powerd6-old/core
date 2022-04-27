@@ -1,3 +1,4 @@
+import 'package:core/src/basics/chances_success.dart';
 import 'package:core/src/introduction/book_structure.dart';
 import 'package:core/src/introduction/materials.dart';
 import 'package:core/src/introduction/distribution.dart';
@@ -16,7 +17,6 @@ Chapter introductionChapter =
     Chapter(heading: Heading(title: "Introduction"), contents: [
   Welcome(),
   Distribution(recommendedAppendix: recommendedAppendix),
-  // TODO: Write a "how to read"
   BookStructure(
       basicRules: basicsChapter,
       characters: charactersChapter,
@@ -42,7 +42,7 @@ Chapter basicsChapter =
 Chapter chancesOfSuccess = Chapter(
     heading: Heading(title: "Chances of Success and Difficulties"),
     contents: [
-      // TODO: Create dynamic difficulty table
+      ChancesOfSuccess()
     ]);
 
 Chapter charactersChapter =
