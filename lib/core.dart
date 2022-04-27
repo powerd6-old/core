@@ -1,4 +1,5 @@
 import 'package:core/src/basics/chances_success.dart';
+import 'package:core/src/basics/players_and_roles.dart';
 import 'package:core/src/introduction/book_structure.dart';
 import 'package:core/src/introduction/materials.dart';
 import 'package:core/src/introduction/distribution.dart';
@@ -32,6 +33,7 @@ Chapter recommendedAppendix = Chapter(
 
 Chapter basicsChapter =
     Chapter(heading: Heading(title: "Basic Rules"), contents: [
+  PlayerAndRoles(),
   // TODO: Write a "rolling dice", use the `chancesOfSuccess` appendix to link
   // TODO: Detail test rules
   // TODO: Detail the attributes
@@ -41,9 +43,7 @@ Chapter basicsChapter =
 
 Chapter chancesOfSuccess = Chapter(
     heading: Heading(title: "Chances of Success and Difficulties"),
-    contents: [
-      ChancesOfSuccess()
-    ]);
+    contents: [ChancesOfSuccess()]);
 
 Chapter charactersChapter =
     Chapter(heading: Heading(title: "Characters"), contents: [
