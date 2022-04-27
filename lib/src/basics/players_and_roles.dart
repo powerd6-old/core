@@ -22,6 +22,7 @@ class PlayerAndRoles extends Content with Indexable {
   @override
   String toHtml() {
     return """
+      ${heading.toHtml()}
       <p>There are two roles that need to be filled in order to run a successful powerd6 game: Characters and the Game Master.</p>
       ${getChildren().map((e) => e as Content).map((e) => e.toHtml()).join()}
 """;
