@@ -2,10 +2,11 @@ import 'package:powerbook/mixins.dart';
 import 'package:powerbook/models.dart';
 
 class Welcome extends Content with Indexable {
+  Heading heading = Heading(title: "Welcome");
   @override
   String toHtml() {
     return """
-      <h1 id="${getId()}">${getTitle()}</h1>
+      ${heading.toHtml()}
       <p>Welcome to the powerd6 role-playing system.</p>
       <p>This book contains the core rules of the system and provide a framework for players to use in order to run their fantastical narratives.</p>
       <p>The rules of powerd6 are designed for everyone and are guided by these principles:</p>
@@ -20,11 +21,11 @@ class Welcome extends Content with Indexable {
 
   @override
   String getId() {
-    return "welcome";
+    return heading.getId();
   }
 
   @override
   String getTitle() {
-    return "Welcome";
+    return heading.getTitle();
   }
 }

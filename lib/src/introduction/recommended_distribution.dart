@@ -42,9 +42,7 @@ class RecommendedDistribution extends Content {
       ${items.map((e) => '''
         <tr>
           <td>
-            <a href="${e.link}">
-              ${e.name}
-            </a>
+            ${Reference.external(link: e.link, text: e.name).toHtml()}
           </td>
           <td>${e.description}</td>
         </tr>
