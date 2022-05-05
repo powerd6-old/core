@@ -1,5 +1,12 @@
 import 'package:powerbook/models.dart';
 
+class ChancesOfSuccessIntroduction extends Content {
+  @override
+  String toHtml() {
+    return '<p>The percentages below consider partial and normal successes as valid.</p>';
+  }
+}
+
 class ChancesOfSuccess extends Content {
   static const int minimumAttributeValue = -3;
   static const int maximumAttributeValue = 5;
@@ -21,27 +28,21 @@ class ChancesOfSuccess extends Content {
       String displayProbability =
           "${(clampedProbability * 100).toStringAsFixed(0)}%";
       if (clampedProbability == 0) {
-        result += """
-        <td colspan="${1 + maximumDifficulty - difficulty}">
-          $displayProbability
-        </td>
-""";
+        result += '<td colspan="${1 + maximumDifficulty - difficulty}">'
+            '$displayProbability'
+            '</td>';
         break;
       } else {
         if (clampedProbability == 1) {
           if (difficulty == 1) {
-            result += """
-          <td colspan="${attributeValue + difficulty}">
-            $displayProbability
-          </td>
-""";
+            result += '<td colspan="${attributeValue + difficulty}">'
+                '$displayProbability'
+                '</td>';
           }
         } else {
-          result += """
-      <td>
-        $displayProbability
-      </td>
-""";
+          result += '<td>'
+              '$displayProbability'
+              '</td>';
         }
       }
     }
@@ -50,27 +51,25 @@ class ChancesOfSuccess extends Content {
 
   @override
   String toHtml() {
-    return """
-      <table>
-        <thead>
-          <tr>
-            <td></td>
-            <th colspan="${attributeValueRange.length}">Difficulties</th>
-          </tr>
-          <tr>
-            <th>Attribute Value</th>
-            ${difficultyRange.map((e) => "<th>$e</th>").join()}
-          </tr>
-        </thead>
-        <tbody>
-          ${attributeValueRange.map((attributeValue) => """
-            <tr>
-              <th>$attributeValue</th>
-              ${getProbabilityRows(attributeValue, difficultyRange)}
-            </tr>
-""").join()}
-        </tbody>
-      </table>
-""";
+    return '<table>'
+        '<thead>'
+        '<tr>'
+        '<td></td>'
+        '<th colspan="${attributeValueRange.length}">Difficulties</th>'
+        '</tr>'
+        '<tr>'
+        '<th>Attribute Value</th>'
+        '${difficultyRange.map((e) => "<th>$e</th>").join()}'
+        '</tr>'
+        '</thead>'
+        '<tbody>'
+        '${attributeValueRange.map(attributeRow).join()}'
+        '</tbody>'
+        '</table>';
   }
+
+  String attributeRow(attributeValue) => '<tr>'
+      '<th>$attributeValue</th>'
+      '${getProbabilityRows(attributeValue, difficultyRange)}'
+      '</tr>';
 }

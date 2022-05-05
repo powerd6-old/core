@@ -43,7 +43,7 @@ Chapter basicsChapter =
 
 Chapter chancesOfSuccess = Chapter(
     heading: Heading(title: "Chances of Success and Difficulties"),
-    contents: [ChancesOfSuccess()]);
+    contents: [ChancesOfSuccessIntroduction(), ChancesOfSuccess()]);
 
 Chapter charactersChapter =
     Chapter(heading: Heading(title: "Characters"), contents: [

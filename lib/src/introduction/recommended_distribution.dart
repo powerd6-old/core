@@ -22,33 +22,27 @@ class RecommendedDistribution extends Content {
 
   @override
   String toHtml() {
-    return """
-      ${recommendedTable("Expansions", expansions)}
-      ${recommendedTable("Supplements", supplements)}
-""";
+    return '${recommendedTable("Expansions", expansions)}'
+        '${recommendedTable("Supplements", supplements)}';
   }
 
   String recommendedTable(String title, List<RecommendedItem> items) {
-    return '''
-  <h2>$title</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      ${items.map((e) => '''
-        <tr>
-          <td>
-            ${Reference.external(link: e.link, text: e.name).toHtml()}
-          </td>
-          <td>${e.description}</td>
-        </tr>
-      ''').join("")}
-    </tbody>
-  </table>
-''';
+    return '<h2>$title</h2>'
+        '<table>'
+        '<thead>'
+        '<tr>'
+        '<th>Name</th>'
+        '<th>Description</th>'
+        '</tr>'
+        '</thead>'
+        '<tbody>${items.map(tableItem).join("")}</tbody>'
+        '</table>';
   }
+
+  String tableItem(e) => '<tr>'
+      '<td>'
+      '${Reference.external(link: e.link, text: e.name).toHtml()}'
+      '</td>'
+      '<td>${e.description}</td>'
+      '</tr>';
 }
