@@ -4,7 +4,9 @@ import 'package:powerbook/models.dart';
 class RollingDice extends MarkdownContent with Indexable {
   static Heading heading = Heading(title: "Rolling Dice");
 
-  RollingDice(Indexable combatCritical, Indexable testCritical)
+  final Content numberOfRolls, criticalRoll;
+
+  RollingDice({required this.criticalRoll, required this.numberOfRolls})
       : super(markdown: """
 ${heading.toHtml()}
 
@@ -13,8 +15,8 @@ There are multiple mechanics in the game that require a player to roll the dice 
 In the rest of the book, rolling a dice will be referred to as 1d6 for one dice roll, 2d6 for two dice rolls, and so on.
 
 When rolling dice, these rules always apply:
-${NumberOfRolls().toHtml()}
-${CriticalRoll(combatCritical, testCritical).toHtml()}
+${numberOfRolls.toHtml()}
+${criticalRoll.toHtml()}
 """);
 
   @override
@@ -29,7 +31,7 @@ ${CriticalRoll(combatCritical, testCritical).toHtml()}
 
   @override
   List<Indexable> getChildren() {
-    return [NumberOfRolls()];
+    return [numberOfRolls, criticalRoll].map((e) => e as Indexable).toList();
   }
 }
 
@@ -117,7 +119,9 @@ class CriticalRoll extends MarkdownContent with Indexable {
     return heading.getTitle();
   }
 
-  CriticalRoll(Indexable combatCritical, Indexable testCritical)
+  final Indexable combatCritical, testCritical;
+
+  CriticalRoll({required this.combatCritical, required this.testCritical})
       : super(markdown: """
 ${heading.toHtml()}
 

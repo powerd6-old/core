@@ -1,3 +1,5 @@
+import 'package:core/src/basics/actions.dart';
+import 'package:core/src/basics/attributes.dart';
 import 'package:core/src/basics/chances_success.dart';
 import 'package:core/src/basics/players_and_roles.dart';
 import 'package:core/src/basics/rolling_dice.dart';
@@ -19,10 +21,13 @@ final List<Author> authors = [
 Chapter introductionChapter =
     Chapter(heading: Heading(title: "Introduction"), contents: [
   Welcome(),
-  Distribution(recommendedAppendix),
+  Distribution(recommendedAppendix: recommendedAppendix),
   BookStructure(
-      basicsChapter, charactersChapter, combatChapter,
-      explorationChapter, appendix),
+      basicRules: basicsChapter,
+      characters: charactersChapter,
+      combat: combatChapter,
+      exploration: explorationChapter,
+      appendices: appendix),
   Materials()
 ]);
 
@@ -30,13 +35,19 @@ Chapter recommendedAppendix = Chapter(
     heading: Heading(title: "Recommended Expansions and Supplements"),
     contents: [RecommendedDistribution()]);
 
+TestCritical testCritical = TestCritical();
+
+CriticalRoll criticalRoll = CriticalRoll(
+    combatCritical: testCritical, // TODO: fix combatCritical
+    testCritical: testCritical);
+
 Chapter basicsChapter =
     Chapter(heading: Heading(title: "Basic Rules"), contents: [
   PlayerAndRoles(),
-  RollingDice(TestCritical(), TestCritical()),
-  Test(TestCritical(), chancesOfSuccess),
-  // TODO: Detail the attributes
-  // TODO: Explain actions, half-actions and reactions
+  RollingDice(numberOfRolls: NumberOfRolls(), criticalRoll: criticalRoll),
+  Test(chancesOfSuccess: chancesOfSuccess, testCritical: testCritical),
+  Attributes(),
+  Actions(),
   // TODO: Explain spells
 ]);
 

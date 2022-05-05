@@ -4,9 +4,14 @@ import 'package:powerbook/models.dart';
 class BookStructure extends MarkdownContent with Indexable {
   static Heading heading = Heading(title: "Reading this book");
 
+  final Chapter basicRules, characters, combat, exploration;
+  final ChapterList appendices;
   BookStructure(
-      Chapter basicRules, Chapter characters, Chapter combat,
-      Chapter exploration, ChapterList appendices)
+      {required this.basicRules,
+      required this.characters,
+      required this.combat,
+      required this.exploration,
+      required this.appendices})
       : super(markdown: """
 ${heading.toHtml()}
 

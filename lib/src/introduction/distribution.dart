@@ -4,7 +4,9 @@ import 'package:powerbook/models.dart';
 class Distribution extends MarkdownContent with Indexable {
   static Heading heading = Heading(title: "A note on Distribution");
 
-  Distribution(Chapter recommendedAppendix) : super(markdown: """
+  final Chapter recommendedAppendix;
+
+  Distribution({required this.recommendedAppendix}) : super(markdown: """
 ${heading.toHtml()}
 
 The powerd6 system is capable of running a wide variety of games, as such the books are separated between the core rules, expansions and supplements.

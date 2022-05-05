@@ -14,7 +14,15 @@ class Test extends MarkdownContent with Indexable {
     return heading.getTitle();
   }
 
-  Test(TestCritical testCritical, Chapter chancesOfSuccess)
+  @override
+  List<Indexable> getChildren() {
+    return [testCritical, TestDifficulties(chancesOfSuccess)];
+  }
+
+  final TestCritical testCritical;
+  final Chapter chancesOfSuccess;
+
+  Test({required this.testCritical, required this.chancesOfSuccess})
       : super(markdown: """
 ${heading.toHtml()}
 
@@ -72,7 +80,7 @@ class TestDifficulties extends MarkdownContent with Indexable {
     return heading.getTitle();
   }
 
-  TestDifficulties(Chapter chancesOfSuccess) : super(markdown: """
+  TestDifficulties(Indexable chancesOfSuccess) : super(markdown: """
 ${heading.toHtml()}
 
 
