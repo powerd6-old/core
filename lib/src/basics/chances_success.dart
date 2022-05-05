@@ -13,7 +13,7 @@ class ChancesOfSuccess extends Content {
   static const int maximumDifficulty = 12;
 
   List<int> attributeValueRange = List.generate(
-      (minimumAttributeValue.abs() + maximumAttributeValue.abs()),
+      (minimumAttributeValue.abs() + maximumAttributeValue.abs() + 1),
       (index) => minimumAttributeValue + index);
 
   List<int> difficultyRange =

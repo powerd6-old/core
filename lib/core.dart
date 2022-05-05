@@ -1,5 +1,7 @@
 import 'package:core/src/basics/chances_success.dart';
 import 'package:core/src/basics/players_and_roles.dart';
+import 'package:core/src/basics/rolling_dice.dart';
+import 'package:core/src/basics/test.dart';
 import 'package:core/src/introduction/book_structure.dart';
 import 'package:core/src/introduction/materials.dart';
 import 'package:core/src/introduction/distribution.dart';
@@ -17,13 +19,10 @@ final List<Author> authors = [
 Chapter introductionChapter =
     Chapter(heading: Heading(title: "Introduction"), contents: [
   Welcome(),
-  Distribution(recommendedAppendix: recommendedAppendix),
+  Distribution(recommendedAppendix),
   BookStructure(
-      basicRules: basicsChapter,
-      characters: charactersChapter,
-      combat: combatChapter,
-      exploration: explorationChapter,
-      appendices: appendix),
+      basicsChapter, charactersChapter, combatChapter,
+      explorationChapter, appendix),
   Materials()
 ]);
 
@@ -34,8 +33,8 @@ Chapter recommendedAppendix = Chapter(
 Chapter basicsChapter =
     Chapter(heading: Heading(title: "Basic Rules"), contents: [
   PlayerAndRoles(),
-  // TODO: Write a "rolling dice", use the `chancesOfSuccess` appendix to link
-  // TODO: Detail test rules
+  RollingDice(TestCritical(), TestCritical()),
+  Test(TestCritical(), chancesOfSuccess),
   // TODO: Detail the attributes
   // TODO: Explain actions, half-actions and reactions
   // TODO: Explain spells
