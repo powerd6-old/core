@@ -28,7 +28,7 @@ class PlayerAndRoles extends Content with Indexable {
 }
 
 class CharacterRole extends MarkdownContent with Indexable {
-  static Heading heading = Heading(title: "Characters");
+  static Heading heading = Heading(title: "Player Characters");
 
   CharacterRole() : super(markdown: """
 ${heading.toHtml()}

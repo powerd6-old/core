@@ -3,7 +3,10 @@ import 'package:core/src/basics/attributes.dart';
 import 'package:core/src/basics/chances_success.dart';
 import 'package:core/src/basics/players_and_roles.dart';
 import 'package:core/src/basics/rolling_dice.dart';
+import 'package:core/src/basics/spells.dart';
 import 'package:core/src/basics/test.dart';
+import 'package:core/src/character/character_sheets.dart';
+import 'package:core/src/character/characters.dart';
 import 'package:core/src/introduction/book_structure.dart';
 import 'package:core/src/introduction/materials.dart';
 import 'package:core/src/introduction/distribution.dart';
@@ -48,7 +51,7 @@ Chapter basicsChapter =
   Test(chancesOfSuccess: chancesOfSuccess, testCritical: testCritical),
   Attributes(),
   Actions(),
-  // TODO: Explain spells
+  Spells(characterPoints: testCritical), // TODO: fix characterPoints
 ]);
 
 Chapter chancesOfSuccess = Chapter(
@@ -57,9 +60,12 @@ Chapter chancesOfSuccess = Chapter(
 
 Chapter charactersChapter =
     Chapter(heading: Heading(title: "Characters"), contents: [
-  // TODO: Write about what "characters" are
-  // TODO: Share character sheet
+  Characters(),
+  CharacterSheets(
+      characterSheetAppendix:
+          chancesOfSuccess) // TODO: fix characterSheetAppendix
   // TODO: Share rules for filling the character sheet
+  // TODO: Write about the point buy system "chacterPoints"
   // TODO: Showcase example character creation process
 ]);
 
