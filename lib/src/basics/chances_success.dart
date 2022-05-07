@@ -55,7 +55,7 @@ class ChancesOfSuccess extends Content {
         '<thead>'
         '<tr>'
         '<td></td>'
-        '<th colspan="${attributeValueRange.length}">Difficulties</th>'
+        '<th colspan="${difficultyRange.length}">Difficulties</th>'
         '</tr>'
         '<tr>'
         '<th>Attribute Value</th>'
