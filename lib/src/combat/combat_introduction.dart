@@ -17,7 +17,7 @@ class CombatIntroduction extends MarkdownContent with Indexable {
   CombatIntroduction() : super(markdown: """
 ${heading.toHtml()}
 
-Combat in powerd6 tries to be simple, without losing the crunchiness that other system that use multiple dice have.
+Combat in powerd6 tries to be simple, without losing the crunchiness that other systems that use multiple dice have.
 
 Combat qualifies any situation where one or more characters are trying to harm others knowingly.
 

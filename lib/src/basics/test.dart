@@ -86,13 +86,13 @@ ${heading.toHtml()}
 
 The difficulty of a test depends on who is taking it, therefore it is the Game Master's responsibility to choose the appropriate difficulty for each situation.
 
-As a reference, these are some appropriate difficulties for tests, and at which AV the test has 50% chance of success or partial success:
+As a reference, these are some appropriate difficulties for tests, and at which attribute value the test has 50% chance of success or partial success:
 
 ${LikelihoodTable().toHtml()}
 
 Note that the **impossible** difficulty is only possible if the character has a blessing, item, spell or other effect that adds +1 to the test in question.
 
-A detailed breakdown of the percent chance of success on each difficulty, with each AV value is available on ${Reference.internal(text: chancesOfSuccess.getTitle(), link: chancesOfSuccess.getId()).toHtml()}
+A detailed breakdown of the percent chance of success on each difficulty, for each attribute value, is available on ${Reference.internal(text: chancesOfSuccess.getTitle(), link: chancesOfSuccess.getId()).toHtml()}
 """);
 }
 
@@ -104,7 +104,7 @@ class LikelihoodTable extends Content {
         '<tr>'
         '<th>Likelihood</th>'
         '<th style="text-align:center">Difficulty</th>'
-        '<th style="text-align:center">50% chance at AV</th>'
+        '<th style="text-align:center">50% chance at attribute value</th>'
         '</tr>'
         '</thead>'
         '<tbody>'

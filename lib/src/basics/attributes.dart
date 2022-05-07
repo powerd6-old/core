@@ -98,7 +98,7 @@ ${heading.toHtml()}
 
 Powerd6 relies on attributes to express the unique aspects of characters and describe what they are capable of.
 
-Attributes represent physical, emotional and mental traits a characters possesses. These can range from `${ChancesOfSuccess.minimumAttributeValue}` to `${ChancesOfSuccess.maximumAttributeValue}` in value. Attribute values are referred to as `AV` in the rest of the book.
+Attributes represent physical, emotional and mental traits a characters possesses. These can range from `${ChancesOfSuccess.minimumAttributeValue}` to `${ChancesOfSuccess.maximumAttributeValue}` in value.
 
 Each attribute also has three focuses, representing more nuanced aspects of attribute and describing a precise aspect of that attribute.
 
@@ -183,7 +183,7 @@ ${attributes.map((e) => e.toHtml()).join()}
                 "Influencing and changing opinions are at the core of what persuasion represents."
                 "Convincing someone of a lie, getting a discount or bluffing are achieved with persuasion.",
             concept:
-                "Logically or illogically, it seems that people always thing you are talking the deepest truths."
+                "Logically or illogically, it seems that people always think you are talking the deepest truths."
                 '"Maybe he is truly just walking in this back-alley with no intentions of burglary, and that rope is just a fashion statement", thought the guard that found you lurking in the dark back-alley.'),
         Focus(
             name: "Seduction",

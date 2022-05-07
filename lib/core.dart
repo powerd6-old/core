@@ -9,7 +9,10 @@ import 'package:core/src/character/character_points.dart';
 import 'package:core/src/character/character_sheets.dart';
 import 'package:core/src/character/characters.dart';
 import 'package:core/src/character/point_buy.dart';
+import 'package:core/src/combat/combat_critical.dart';
+import 'package:core/src/combat/combat_damage.dart';
 import 'package:core/src/combat/combat_introduction.dart';
+import 'package:core/src/combat/damage.dart';
 import 'package:core/src/combat/turn_order.dart';
 import 'package:core/src/introduction/book_structure.dart';
 import 'package:core/src/introduction/materials.dart';
@@ -44,9 +47,8 @@ Chapter recommendedAppendix = Chapter(
 
 TestCritical testCritical = TestCritical();
 
-CriticalRoll criticalRoll = CriticalRoll(
-    combatCritical: testCritical, // TODO: fix combatCritical
-    testCritical: testCritical);
+CriticalRoll criticalRoll =
+    CriticalRoll(combatCritical: combatCritical, testCritical: testCritical);
 
 Chapter basicsChapter =
     Chapter(heading: Heading(title: "Basic Rules"), contents: [
@@ -80,12 +82,14 @@ Chapter characterSheets = Chapter(
     heading: Heading(title: "Printable Character Sheet"),
     contents: []); //TODO: Write a print-ready character sheet
 
+CombatCritical combatCritical = CombatCritical();
+
 Chapter combatChapter = Chapter(heading: Heading(title: "Combat"), contents: [
   CombatIntroduction(),
   TurnOrder(actions: actions),
-  // TODO: Explain HP, damage and injuries
-  // TODO: critical!
-  // TODO: Explain death, resurrection and unconsciousness
+  CombatDamage(criticalRoll: criticalRoll),
+  combatCritical,
+  Damage()
 ]);
 
 Chapter explorationChapter =

@@ -41,6 +41,8 @@ A turn can be composed of:
 
 In addition to these, a turn can have up to three unique Free Actions, regardless of what else happened during it.
 
+Any of the actions types can be counted as a defensive action, if they would reduce the chance of an opponent hitting or damaging a character.
+
 ${actions.map((e) => e as Content).map((e) => e.toHtml()).join()}
 """);
 }
