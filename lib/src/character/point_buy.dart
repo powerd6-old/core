@@ -36,11 +36,11 @@ Note that whenever a negative value appears, it means the change will give chara
   To select an attribute focus, the cost depends on the number of focuses your character currently has:
 
   - 0 to 2: `1` point
-  - 3 to 4: `5` point
-  - 5 to 6: `9` point
-  - 7 to 8: `10` point
-  - 9 to 14: `11` point
-  - 15 to 18: `12` point
+  - 3 to 4: `5` points
+  - 5 to 6: `9` points
+  - 7 to 8: `10` points
+  - 9 to 14: `11` points
+  - 15 to 18: `12` points
 
 - Health Points:
 
