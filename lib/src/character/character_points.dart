@@ -25,7 +25,7 @@ More points can be acquired during the games, increasing the power of a characte
 
 Character points can be spent during character creation or whenever a character is out of danger.
 
-When spending character points, each point correlates to 30 minutes of time spent, so make sure your character can afford the downtime before spending character points.
+When spending character points, each point correlates to 30 minutes of time spent, so make sure your character can afford the downtime before spending character points. 
 This means that, for example, if a player wants to use 4 character points to learn a new spell, their character will be focused on learn ing the new spell for 2 in-game hours.
 
 Remember, not all rules from the ${Reference.internal(text: "character creation point buy", link: pointBuy.getId()).toHtml()} are available when upgrading your character later on.

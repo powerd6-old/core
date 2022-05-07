@@ -9,6 +9,8 @@ import 'package:core/src/character/character_points.dart';
 import 'package:core/src/character/character_sheets.dart';
 import 'package:core/src/character/characters.dart';
 import 'package:core/src/character/point_buy.dart';
+import 'package:core/src/combat/combat_introduction.dart';
+import 'package:core/src/combat/turn_order.dart';
 import 'package:core/src/introduction/book_structure.dart';
 import 'package:core/src/introduction/materials.dart';
 import 'package:core/src/introduction/distribution.dart';
@@ -52,9 +54,11 @@ Chapter basicsChapter =
   RollingDice(numberOfRolls: NumberOfRolls(), criticalRoll: criticalRoll),
   Test(chancesOfSuccess: chancesOfSuccess, testCritical: testCritical),
   Attributes(),
-  Actions(),
+  actions,
   Spells(characterPoints: characterPoints),
 ]);
+
+Actions actions = Actions();
 
 Chapter chancesOfSuccess = Chapter(
     heading: Heading(title: "Chances of Success and Difficulties"),
@@ -66,11 +70,9 @@ CharacterPoints characterPoints = CharacterPoints(pointBuy: pointBuy);
 Chapter charactersChapter =
     Chapter(heading: Heading(title: "Characters"), contents: [
   Characters(),
-  CharacterSheets(
-      characterSheetAppendix:
-          characterSheets),
-  pointBuy, // TODO: Share rules for filling the character sheet
-  characterPoints, // TODO: Write about the point buy system "chacterPoints"
+  CharacterSheets(characterSheetAppendix: characterSheets),
+  characterPoints,
+  pointBuy,
   // TODO: Showcase example character creation process
 ]);
 
@@ -79,9 +81,10 @@ Chapter characterSheets = Chapter(
     contents: []); //TODO: Write a print-ready character sheet
 
 Chapter combatChapter = Chapter(heading: Heading(title: "Combat"), contents: [
-  // TODO: Write a "intro to combat" detailling what counts as combat
-  // TODO: Explain turn order
-  // TODO: Explain HP, damage
+  CombatIntroduction(),
+  TurnOrder(actions: actions),
+  // TODO: Explain HP, damage and injuries
+  // TODO: critical!
   // TODO: Explain death, resurrection and unconsciousness
 ]);
 

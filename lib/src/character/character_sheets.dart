@@ -52,6 +52,11 @@ The basic information a character sheet contains are:
 - Character Points
 
   This is the amount of remaining Character Points your character has available to them.
+- Current and Maximum Health Points
+
+  These are an indication of your character's vitals.
+
+  The maximum number of health points represents the healthiest your character can be, while the current number indicates how your character is faring at the time.
 - Attributes
 
   These are your attribute values, as well as an indication of which attribute is your preferred one.
@@ -71,9 +76,9 @@ The basic information a character sheet contains are:
   - Food rations for 5 days
   - Horse-drawn carriage (parked at city gates)
 
-  - Currency
+- Currency
 
-    This section is meant to signify how much monetary value your character is carrying, this is left separated to avoid the need of writing down "gold coins" or similar in your inventory.
+  This section is meant to signify how much monetary value your character is carrying, this is left separated to avoid the need of writing down "gold coins" or similar in your inventory.
 
 - Spells
 
