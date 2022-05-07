@@ -23,11 +23,9 @@ Note that whenever a negative value appears, it means the change will give chara
 
 - Attribute values:
 
-  Each attribute value increase costs `4` times the destination value to be achieved.
-  For example, increasing from `3` to `4` it takes `16` (`4*4`) points.
+  Each attribute value increase costs `4` times the destination value to be achieved. For example, increasing from `3` to `4` it takes `16` (`4*4`) points.
 
-  Each attribute value decrease beyond `0` returns `3` times the destination value in points.
-  For example, decreasing from `-1` to `-2` takes `-6` (`3*-2`) points, effectively returning them.
+  Each attribute value decrease beyond `0` returns `3` times the destination value in points. For example, decreasing from `-1` to `-2` takes `-6` (`3*-2`) points, effectively returning them.
 
   Decreasing attribute values is only allowed during character creation.
 
@@ -44,9 +42,8 @@ Note that whenever a negative value appears, it means the change will give chara
 
 - Health Points:
 
-  It is not possible to remove Health Points from a character.
-
-  Each extra health point increase costs `2` times the destination value.
+  It is not possible to remove Health Points from a character. Each extra health point increase costs `2` times the destination value. 
+  
   For example, to increase from `10` to `11` it takes `22` (`2*11`) points.
 
 - Learning spells

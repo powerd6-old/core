@@ -19,8 +19,8 @@ class CharacterPoints extends MarkdownContent with Indexable {
   CharacterPoints({required this.pointBuy}) : super(markdown: """
 ${heading.toHtml()}
 
-Character points are a way of representing how powerful or versatile your character is.
-Each game will have a set amount of character points made available to the players at the start, so they can create their character.
+Character points are a way of representing how powerful or versatile your character is. 
+Each game will have a set amount of character points made available to the players at the start, so they can create their character. 
 More points can be acquired during the games, increasing the power of a character.
 
 Character points can be spent during character creation or whenever a character is out of danger.
