@@ -36,7 +36,6 @@ Chapter introductionChapter =
       basicRules: basicsChapter,
       characters: charactersChapter,
       combat: combatChapter,
-      exploration: explorationChapter,
       appendices: appendix),
   Materials()
 ]);
@@ -92,12 +91,6 @@ Chapter combatChapter = Chapter(heading: Heading(title: "Combat"), contents: [
   Damage()
 ]);
 
-Chapter explorationChapter =
-    Chapter(heading: Heading(title: "Exploration"), contents: [
-  // TODO: Write a "intro to exploration" sharing how exploration can fit into the game
-  // TODO: Explain how to use combat spells outside of combat
-]);
-
 ChapterList appendix = ChapterList(
     heading: Heading(title: "Appendices"),
     chapters: [recommendedAppendix, chancesOfSuccess, characterSheets]);
@@ -109,13 +102,12 @@ class CoreRuleBook extends Book {
                 title: "Core Rulebook",
                 subtitle: "The core rules of the powerd6 role-playing system."),
             authors: authors,
-            chapters: ChapterList(
-                heading: Heading(title: "Chapters"),
-                chapters: [
-                  introductionChapter,
-                  basicsChapter,
-                  charactersChapter,
-                  combatChapter
-                ]),
+            chapters:
+                ChapterList(heading: Heading(title: "Chapters"), chapters: [
+              introductionChapter,
+              basicsChapter,
+              charactersChapter,
+              combatChapter,
+            ]),
             appendices: appendix);
 }
