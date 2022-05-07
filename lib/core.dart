@@ -5,8 +5,10 @@ import 'package:core/src/basics/players_and_roles.dart';
 import 'package:core/src/basics/rolling_dice.dart';
 import 'package:core/src/basics/spells.dart';
 import 'package:core/src/basics/test.dart';
+import 'package:core/src/character/character_points.dart';
 import 'package:core/src/character/character_sheets.dart';
 import 'package:core/src/character/characters.dart';
+import 'package:core/src/character/point_buy.dart';
 import 'package:core/src/introduction/book_structure.dart';
 import 'package:core/src/introduction/materials.dart';
 import 'package:core/src/introduction/distribution.dart';
@@ -51,23 +53,30 @@ Chapter basicsChapter =
   Test(chancesOfSuccess: chancesOfSuccess, testCritical: testCritical),
   Attributes(),
   Actions(),
-  Spells(characterPoints: testCritical), // TODO: fix characterPoints
+  Spells(characterPoints: characterPoints),
 ]);
 
 Chapter chancesOfSuccess = Chapter(
     heading: Heading(title: "Chances of Success and Difficulties"),
     contents: [ChancesOfSuccessIntroduction(), ChancesOfSuccess()]);
 
+PointBuy pointBuy = PointBuy();
+CharacterPoints characterPoints = CharacterPoints(pointBuy: pointBuy);
+
 Chapter charactersChapter =
     Chapter(heading: Heading(title: "Characters"), contents: [
   Characters(),
   CharacterSheets(
       characterSheetAppendix:
-          chancesOfSuccess) // TODO: fix characterSheetAppendix
-  // TODO: Share rules for filling the character sheet
-  // TODO: Write about the point buy system "chacterPoints"
+          characterSheets),
+  pointBuy, // TODO: Share rules for filling the character sheet
+  characterPoints, // TODO: Write about the point buy system "chacterPoints"
   // TODO: Showcase example character creation process
 ]);
+
+Chapter characterSheets = Chapter(
+    heading: Heading(title: "Printable Character Sheet"),
+    contents: []); //TODO: Write a print-ready character sheet
 
 Chapter combatChapter = Chapter(heading: Heading(title: "Combat"), contents: [
   // TODO: Write a "intro to combat" detailling what counts as combat
@@ -84,7 +93,7 @@ Chapter explorationChapter =
 
 ChapterList appendix = ChapterList(
     heading: Heading(title: "Appendices"),
-    chapters: [recommendedAppendix, chancesOfSuccess]);
+    chapters: [recommendedAppendix, chancesOfSuccess, characterSheets]);
 
 class CoreRuleBook extends Book {
   CoreRuleBook()
