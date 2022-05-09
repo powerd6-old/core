@@ -1,9 +1,11 @@
+import 'package:core/content/appendices/chance_of_success.dart';
 import 'package:core/content/appendices/character_sheet.dart';
 import 'package:core/content/appendices/recommended.dart';
 import 'package:core/content/chapters/character.dart';
 import 'package:core/content/chapters/combat.dart';
 import 'package:core/content/chapters/introduction.dart';
 import 'package:core/content/chapters/rules.dart';
+import 'package:core/content/chapters/tests.dart';
 import 'package:powerbook/models.dart';
 
 class BookChapters {
@@ -12,6 +14,7 @@ class BookChapters {
     IntroductionChapter.chapter,
     RulesChapter.chapter,
     CharacterChapter.chapter,
+    TestChapter.chapter,
     CombatChapter.chapter,
   ]);
 
@@ -19,5 +22,6 @@ class BookChapters {
       ChapterList(heading: Heading(title: "Appendices"), chapters: [
     RecommendedAppendix.chapter,
     CharacterSheetAppendix.chapter,
+    ChanceOfSuccessAppendix.chapter
   ]);
 }

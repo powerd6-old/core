@@ -2,7 +2,7 @@ import 'package:powerbook/models.dart';
 
 class Critical extends IndexableMarkdownContent {
   Critical() : super(markdown: """
-# Critical
+# Critical during tests
 
 If the roll for the test is critical add 3 to the roll result.
 
