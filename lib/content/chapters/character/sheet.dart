@@ -8,7 +8,7 @@ Information about a character is stored in a "Character Sheet", a piece of paper
 
 The basic information a character sheet contains are:
 
-## Name:
+## Name
 
 Your character's name, nicknames and titles.
 

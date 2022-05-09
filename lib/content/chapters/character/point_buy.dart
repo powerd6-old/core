@@ -8,7 +8,7 @@ These are the rules that apply when using character points.
 
 Note that whenever a negative value appears, it means the change will give character points **back** to the character.
 
-## Attribute values:
+## Attribute values
 
 Each attribute value increase costs `4` times the destination value to be achieved. For example, increasing from `3` to `4` it takes `16` (`4*4`) points.
 
@@ -16,7 +16,7 @@ Each attribute value decrease beyond `0` returns `3` times the destination value
 
 Decreasing attribute values is only allowed during character creation.
 
-## Acquiring a focus:
+## Acquiring a focus
 
 To select an attribute focus, the cost depends on the number of focuses your character currently has:
 
@@ -27,7 +27,7 @@ To select an attribute focus, the cost depends on the number of focuses your cha
 - 9 to 14: `11` points
 - 15 to 18: `12` points
 
-## Health Points:
+## Health Points
 
 It is not possible to remove Health Points from a character. Each extra health point increase costs `2` times the destination value. 
 
