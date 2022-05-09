@@ -1,3 +1,5 @@
+import 'package:core/content/authors.dart';
+import 'package:core/content/heading.dart';
 import 'package:core/src/basics/actions.dart';
 import 'package:core/src/basics/attributes.dart';
 import 'package:core/src/basics/chances_success.dart';
@@ -20,13 +22,6 @@ import 'package:core/src/introduction/distribution.dart';
 import 'package:core/src/introduction/recommended_distribution.dart';
 import 'package:core/src/introduction/welcome.dart';
 import 'package:powerbook/models.dart';
-
-final List<Author> authors = [
-  Author(
-      name: "Hector Castelli Zacharias",
-      email: "hector.zacharias@gmail.com",
-      twitter: "ZektorH"),
-];
 
 Chapter introductionChapter =
     Chapter(heading: Heading(title: "Introduction"), contents: [
@@ -98,10 +93,8 @@ ChapterList appendix = ChapterList(
 class CoreRuleBook extends Book {
   CoreRuleBook()
       : super(
-            heading: Heading(
-                title: "Core Rulebook",
-                subtitle: "The core rules of the powerd6 role-playing system."),
-            authors: authors,
+            heading: BookHeading.heading,
+            authors: Authors.authors,
             chapters:
                 ChapterList(heading: Heading(title: "Chapters"), chapters: [
               introductionChapter,

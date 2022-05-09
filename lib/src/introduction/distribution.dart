@@ -1,3 +1,4 @@
+import 'package:core/src/introduction/recommended_distribution.dart';
 import 'package:powerbook/mixins.dart';
 import 'package:powerbook/models.dart';
 
