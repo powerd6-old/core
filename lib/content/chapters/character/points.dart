@@ -1,7 +1,7 @@
 import 'package:powerbook/mixins.dart';
 import 'package:powerbook/models.dart';
 
-class Points extends MarkdownContent {
+class Points extends IndexableMarkdownContent {
   Points(Indexable pointBuy) : super(markdown: """
 # Character Points
 

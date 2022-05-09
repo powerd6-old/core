@@ -1,7 +1,7 @@
 import 'package:powerbook/mixins.dart';
 import 'package:powerbook/models.dart';
 
-class Health extends MarkdownContent {
+class Health extends IndexableMarkdownContent {
   Health(Indexable critical) : super(markdown: """
 # Combat Damage
 During combat, it is natural for damage to be dealt to characters. To determine if an attack will deal damage to a character, both the attacking and the target characters' attributes are taken into account.

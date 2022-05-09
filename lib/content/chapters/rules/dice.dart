@@ -1,7 +1,7 @@
 import 'package:powerbook/mixins.dart';
 import 'package:powerbook/models.dart';
 
-class Dice extends MarkdownContent {
+class Dice extends IndexableMarkdownContent {
   Dice(Indexable testCritical, Indexable combatCritical) : super(markdown: """
 # Rolling dice
 

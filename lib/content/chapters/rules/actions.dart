@@ -1,6 +1,6 @@
 import 'package:powerbook/models.dart';
 
-class Actions extends MarkdownContent {
+class Actions extends IndexableMarkdownContent {
   Actions() : super(markdown: """
 # Actions
 

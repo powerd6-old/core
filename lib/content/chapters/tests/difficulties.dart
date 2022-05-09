@@ -1,7 +1,7 @@
 import 'package:powerbook/mixins.dart';
 import 'package:powerbook/models.dart';
 
-class Difficulties extends MarkdownContent {
+class Difficulties extends IndexableMarkdownContent {
   Difficulties(Indexable chanceOfSuccess) : super(markdown: """
 # Difficulties
 

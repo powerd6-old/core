@@ -1,7 +1,7 @@
 import 'package:powerbook/mixins.dart';
 import 'package:powerbook/models.dart';
 
-class Sheet extends MarkdownContent {
+class Sheet extends IndexableMarkdownContent {
   Sheet(Indexable printableSheet) : super(markdown: """
 # Character Sheet
 Information about a character is stored in a "Character Sheet", a piece of paper with things written (or drawn) on it.

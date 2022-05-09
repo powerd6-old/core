@@ -1,6 +1,6 @@
 import 'package:powerbook/models.dart';
 
-class Critical extends MarkdownContent {
+class Critical extends IndexableMarkdownContent {
   Critical() : super(markdown: """
 # Critical during combat
 

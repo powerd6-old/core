@@ -1,7 +1,7 @@
 import 'package:powerbook/mixins.dart';
 import 'package:powerbook/models.dart';
 
-class Distribution extends MarkdownContent {
+class Distribution extends IndexableMarkdownContent {
   Distribution(Indexable recommendedAppendix) : super(markdown: """
 # A note on distribution
 

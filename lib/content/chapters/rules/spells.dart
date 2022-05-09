@@ -1,7 +1,7 @@
 import 'package:powerbook/mixins.dart';
 import 'package:powerbook/models.dart';
 
-class Spells extends MarkdownContent {
+class Spells extends IndexableMarkdownContent {
   Spells(Indexable characterPoints) : super(markdown: """
 # Spells
 

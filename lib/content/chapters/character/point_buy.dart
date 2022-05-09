@@ -1,6 +1,6 @@
 import 'package:powerbook/models.dart';
 
-class PointBuy extends MarkdownContent {
+class PointBuy extends IndexableMarkdownContent {
   PointBuy() : super(markdown: """
 # Point Buy
 

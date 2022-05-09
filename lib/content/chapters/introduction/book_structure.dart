@@ -1,6 +1,6 @@
 import 'package:powerbook/models.dart';
 
-class BookStructure extends MarkdownContent {
+class BookStructure extends IndexableMarkdownContent {
   BookStructure(Chapter basicRules, Chapter characters, Chapter tests,
       Chapter combat, ChapterList appendices)
       : super(markdown: """

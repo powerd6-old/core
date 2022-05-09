@@ -1,6 +1,6 @@
 import 'package:powerbook/models.dart';
 
-class PlayerRoles extends MarkdownContent {
+class PlayerRoles extends IndexableMarkdownContent {
   PlayerRoles() : super(markdown: """
 # Player and their roles
 

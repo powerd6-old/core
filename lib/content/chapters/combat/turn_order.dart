@@ -1,7 +1,7 @@
 import 'package:powerbook/mixins.dart';
 import 'package:powerbook/models.dart';
 
-class TurnOrder extends MarkdownContent {
+class TurnOrder extends IndexableMarkdownContent {
   TurnOrder(Indexable actions) : super(markdown: """
 # Turn Order
 

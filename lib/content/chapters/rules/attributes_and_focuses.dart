@@ -2,9 +2,17 @@ import 'package:powerbook/mixins.dart';
 import 'package:powerbook/models.dart';
 import 'package:powerd6/models.dart';
 
-class AttributesAndFocuses extends MarkdownContent {
-  AttributesAndFocuses()
-      : super(markdown: """
+class AttributesAndFocuses extends IndexableMarkdownContent {
+  static final List<Attribute> attributesInOrder = [
+    Attributes.perception,
+    Attributes.strength,
+    Attributes.charisma,
+    Attributes.agility,
+    Attributes.wisdom,
+    Attributes.dexterity
+  ];
+
+  AttributesAndFocuses() : super(markdown: """
 # Attributes
 
 Powerd6 relies on attributes to express the unique aspects of characters and describe what they are capable of.
@@ -15,15 +23,13 @@ Each attribute also has three focuses, representing more nuanced aspects of attr
 
 Later on, characters may choose a single attribute to be their **Preferred Attribute** and acquire **focuses**.
 
-${[
-          Attributes.perception,
-          Attributes.strength,
-          Attributes.charisma,
-          Attributes.agility,
-          Attributes.wisdom,
-          Attributes.dexterity
-        ].map((e) => AttributeContent(e).toHtml()).join()}
+${attributesInOrder.map((e) => AttributeContent(e).toHtml()).join()}
 """);
+
+  @override
+  List<Indexable> getChildren() {
+    return attributesInOrder.map((e) => AttributeContent(e)).toList();
+  }
 }
 
 class AttributeContent extends Content with Indexable {

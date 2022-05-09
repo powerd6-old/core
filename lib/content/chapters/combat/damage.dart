@@ -1,6 +1,6 @@
 import 'package:powerbook/models.dart';
 
-class Damage extends MarkdownContent {
+class Damage extends IndexableMarkdownContent {
   Damage() : super(markdown: """
 # Damage
 

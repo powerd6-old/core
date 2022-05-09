@@ -7,8 +7,9 @@ import 'package:powerbook/mixins.dart';
 import 'package:powerbook/models.dart';
 
 class CharacterChapter {
-  static final Chapter chapter =
-      Chapter(heading: Heading(title: "Character"), contents: []);
+  static final Chapter chapter = Chapter(
+      heading: Heading(title: "Character"),
+      contents: [definition, sheet, points, pointBuy]);
 
   static final Content definition = Definition();
   static final Content sheet = Sheet(CharacterSheetAppendix.chapter);

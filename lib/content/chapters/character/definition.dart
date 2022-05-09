@@ -1,6 +1,6 @@
 import 'package:powerbook/models.dart';
 
-class Definition extends MarkdownContent {
+class Definition extends IndexableMarkdownContent {
   Definition() : super(markdown: """
 # What are characters
 
