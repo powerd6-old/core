@@ -54,7 +54,7 @@ Chapter basicsChapter =
   PlayerAndRoles(),
   RollingDice(numberOfRolls: NumberOfRolls(), criticalRoll: criticalRoll),
   Test(chancesOfSuccess: chancesOfSuccess, testCritical: testCritical),
-  Attributes(),
+  AttributesContent(),
   actions,
   Spells(characterPoints: characterPoints),
 ]);
