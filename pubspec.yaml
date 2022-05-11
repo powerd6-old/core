@@ -1,5 +1,5 @@
 name: core
-description: A simple command-line application.
+description: The core rules of the powerd6 role-playing system.
 version: 1.0.0
 homepage: https://github.com/powerd6/core
 issue_tracker: https://github.com/powerd6/core/issues

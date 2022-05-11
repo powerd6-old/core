@@ -2,5 +2,15 @@
 .dart_tool/
 .packages
 
+# Version locks for libraries: https://dart.dev/guides/libraries/private-files#pubspeclock
+pubspec.lock
+
 # Conventional directory for build output.
 build/
+
+# Code coverage directory
+coverage/
+coverage.lcov
+
+# Documentation
+doc/

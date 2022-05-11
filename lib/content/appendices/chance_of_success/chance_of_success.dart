@@ -2,8 +2,8 @@ import 'package:powerbook/models.dart';
 import 'package:powerd6/models.dart';
 
 class ChanceOfSuccess extends Content {
-  static int minimumAttributeValue = AttributeValues.abysmal.value;
-  static int maximumAttributeValue = AttributeValues.legendary.value;
+  static int minimumAttributeValue = AttributeValues.minimum.value;
+  static int maximumAttributeValue = AttributeValues.maximum.value;
   static const int maximumDifficulty = 12;
 
   List<int> attributeValueRange = List.generate(
