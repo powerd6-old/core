@@ -1,3 +1,4 @@
+import 'package:powerbook/extensions.dart';
 import 'package:powerbook/mixins.dart';
 import 'package:powerbook/models.dart';
 import 'package:powerd6/models.dart';
@@ -45,14 +46,7 @@ class AttributeContent extends Content with Indexable {
 
   @override
   String toHtml() {
-    return '<article id=${getId()}>'
-        '${Heading(title: "${attribute.number} - ${attribute.name} (${attribute.abbreviation})").toHtml()}'
-        '${attribute.description.description.map((e) => '<p>$e</p>').join()}'
-        '<section>'
-        '${Heading(title: "Focuses").toHtml()}'
-        '${attribute.focuses.map((e) => FocusContent(focus: e).toHtml()).join()}'
-        '</section>'
-        '</article>';
+    return attribute.toHtml();
   }
 }
 
@@ -73,9 +67,6 @@ class FocusContent extends Content with Indexable {
 
   @override
   String toHtml() {
-    return '<article id=${getId()}>'
-        '${Heading(title: focus.name).toHtml()}'
-        '${focus.description.description.map((e) => "<p>$e</p>").join()}'
-        '</article>';
+    return focus.toHtml();
   }
 }
