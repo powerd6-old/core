@@ -41,7 +41,7 @@ Learning a spell does not automatically fulfils it's ritual requirements.
 
 ## Getting currency
 
-Every point used to get currency results in two units of currency being added to the character's inventory.
+Every point used to get currency results in 10 units of currency being added to the character's inventory.
 
 When creating a new character, this currency is used to buy your initial inventory contents.
 
