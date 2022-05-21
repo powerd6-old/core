@@ -27,6 +27,12 @@ If something or someone is hindering the player in the action, or the action rel
 
 Rolling with disadvantage means you will roll two dice, then use the one that is the least favourable to you.
 
+### Stacking Advantages and Disadvantages
+
+If multiple effects cause a roll to have multiple Advantages and Disadvantages, remove them in pairs until there is either one Disadvantage, one Advantage or none of them.
+
+This can be interpreted as advantages being cancelled by disadvantages. This does not mean that, with two Advantages you roll your dice three times. Advantages and Disadvantages do not stack.
+
 ## Critical rolls
 
 Whenever a dice is rolled and it lands on the number corresponding to your Character's preferred attribute, that roll is considered a critical.
