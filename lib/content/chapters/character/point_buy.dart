@@ -20,8 +20,8 @@ Decreasing attribute values is only allowed during character creation.
 
 To select an attribute focus, the cost depends on the number of focuses your character currently has:
 
-- 0 to 2: `1` point
-- 3 to 4: `5` points
+- 0 to 1: `1` point
+- 2 to 4: `5` points
 - 5 to 6: `9` points
 - 7 to 8: `10` points
 - 9 to 14: `11` points

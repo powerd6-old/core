@@ -31,7 +31,7 @@ class AttributeContent extends Content with Indexable {
 
   @override
   String getId() {
-    return "attribute-${attribute.abbreviation.toLowerCase()}";
+    return attribute.getId();
   }
 
   @override
